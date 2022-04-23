@@ -108,3 +108,27 @@ INSERT INTO vehicle (
     3,
     2
 );
+--join two tables: user and vehicle:
+
+SELECT user.last_name,
+        user.first_name,
+        user.hobbies,
+        user.active,
+        vehicle.license_plate,
+        vehicle.color,
+        vehicle.v_type as vehicle_type
+FROM user INNER JOIN vehicle
+ON user.id = vehicle.owner_id;
+
+--join three tables: user, vehicle and vehicle_type:
+
+SELECT user.last_name,
+        user.first_name,
+        user.hobbies,
+        user.active,
+        vehicle.license_plate,
+        vehicle.color,
+        vehicle_type.description
+FROM user
+INNER JOIN vehicle ON user.id = vehicle.owner_id
+INNER JOIN vehicle_type ON vehicle.v_type = vehicle_type.id;
