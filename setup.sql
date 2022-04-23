@@ -14,8 +14,8 @@ INSERT INTO user (
     last_name,
     hobbies
 ) VALUES (
-    "Chet",
-    "Chetson",
+    "Ned",
+    "Flanders",
     "Stuff"
 );
 
@@ -24,8 +24,8 @@ INSERT INTO user (
     last_name,
     hobbies
 ) VALUES (
-    "Dougie",
-    "Benders",
+    "Jefferson",
+    "D'Arcy",
     "Other Stuff"
 );
 
@@ -34,8 +34,8 @@ INSERT INTO user (
     last_name,
     hobbies
 ) VALUES (
-    "Bill",
-    "Dingleberry",
+    "Glenn",
+    "Quagmire",
     "Lots of Stuff"
 );
 
@@ -44,8 +44,8 @@ INSERT INTO user (
     last_name,
     hobbies
 ) VALUES (
-    "Carl",
-    "Winslow",
+    "Cosmo",
+    "Kramer",
     "All kinds of stuff"
 );
 

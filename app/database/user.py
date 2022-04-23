@@ -46,7 +46,7 @@ def select_by_id(pk):
     cursor.close()
     return output_formatter(results)
 
-def update(pk, user_data):              #user_data parameter is a dictionary
+def update(pk, user_data):              #user_data parameter is a dictionary (dict type)
     value_tuple = (
         user_data.get("first_name"),
         user_data.get("last_name"),
