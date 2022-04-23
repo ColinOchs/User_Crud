@@ -5,7 +5,7 @@ from flask import (
 
 from datetime import datetime
 
-from app.database import user
+from app.database import user, vehicle
 
 app= Flask (__name__)
 VERSION = "1.0.0"
@@ -58,4 +58,25 @@ def update_user(pk):
 @app.delete("/users/<int:pk>/")
 def deactivate_user(pk):
     user.deactivate(pk)           #soft delete
+    return "", 204
+
+@app.get("/vehicles/")
+def get_all_vehicles():
+    vehicle_list = vehicle.scan()
+    resp = {
+        "status": "ok",
+        "message": "success",
+        "users": vehicle_list
+    }
+    return resp
+
+@app.post("/vehicles/")
+def create_vehicle(pk):
+    vehicle_data = request.json
+    vehicle.insert(vehicle_data)
+    return "", 204
+
+@app.delete("/vehicles/<int:pk>/")
+def deactivate_vehicle(pk):
+    vehicle.deactivate(pk)           #soft delete
     return "", 204
