@@ -1,6 +1,4 @@
 from app.database import get_db
-from app.database.user import output_formatter
-import sqlite3
 
 
 def output_formatter(results):           #results will be tuple of tuples
@@ -69,17 +67,5 @@ def update(pk, vehicle_data):              #user_data parameter is a dictionary 
 """
     cursor = get_db()
     cursor.execute(statement, value_tuple)
-    cursor.commit()
-    cursor.close()
-
-
-def deactivate(pk):
-    cursor = get_db()
-    statement = """
-        UPDATE vehicle
-        set active = 0
-        WHERE id=?
-    """
-    cursor.execute(statement, (pk,))
     cursor.commit()
     cursor.close()

@@ -71,16 +71,16 @@ INSERT INTO vehicle_type (description) VALUES ('Car');
 INSERT INTO vehicle_type (description) VALUES ('Truck');
 INSERT INTO vehicle_type (description) VALUES ('SUV');
 INSERT INTO vehicle_type (description) VALUES ('Motorcycle');
-INSERT INTO vehicle_type (description) VALUES ('Bicycle');
+INSERT INTO vehicle_type (description) VALUES ('Van');
 --CREATE SOME DUMMY DATA FOR VEHICLES:
 INSERT INTO vehicle (
     color,
     license_plate,
     v_type,
-    owner_id,
+    owner_id
 ) VALUES (
-    "red",
-    "HELLO1",
+    "white",
+    "ECTO-1",
     1,
     1
 );
@@ -89,11 +89,11 @@ INSERT INTO vehicle (
     color,
     license_plate,
     v_type,
-    owner_id,
+    owner_id
 ) VALUES (
-    "purple",
-    "HELLOworld",
-    2,
+    "red",
+    "ASSMAN",
+    4,
     2
 );
 
@@ -101,10 +101,22 @@ INSERT INTO vehicle (
     color,
     license_plate,
     v_type,
-    owner_id,
+    owner_id
 ) VALUES (
-    "black",
-    "HELLOWORLD2",
+    "silver",
+    "OUTATIME",
+    1,
+    3
+);
+
+INSERT INTO vehicle (
+    color,
+    license_plate,
+    v_type,
+    owner_id
+) VALUES (
+    "yellow",
+    "TODFTHR",
     3,
     2
 );

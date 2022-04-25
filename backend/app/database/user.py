@@ -65,15 +65,13 @@ def update(pk, user_data):              #user_data parameter is a dictionary (di
     cursor.commit()
     cursor.close()
 
-def deactivate(pk, user_data):
+def deactivate(pk):
     cursor = get_db()
-
     statement = """
         UPDATE user
         set active = 0
         WHERE id=?
     """
-    
-    cursor.execute(statement)
+    cursor.execute(statement, (pk,))
     cursor.commit()
     cursor.close()
